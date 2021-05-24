@@ -1,0 +1,14 @@
+const allCategories = document.querySelectorAll(".item");
+console.log(`В списке ${allCategories.length} категории`);
+const animalCategoryList = allCategories[0].querySelectorAll("li");
+const animalCategoryName = allCategories[0].querySelector("h2");
+console.log(`Категория: ${animalCategoryName.textContent} `);
+console.log(`Количество элементов: ${animalCategoryList.length}`);
+const foodCategoryList = allCategories[1].querySelectorAll("li");
+const foodCategoryName = allCategories[1].querySelector("h2");
+console.log(`Категория: ${foodCategoryName.textContent} `);
+console.log(`Количество элементов: ${foodCategoryList.length}`);
+const techCategoryList = allCategories[2].querySelectorAll("li");
+const techCategoryName = allCategories[2].querySelector("h2");
+console.log(`Категория: ${techCategoryName.textContent} `);
+console.log(`Количество элементов: ${techCategoryList.length}`);
