@@ -158,7 +158,7 @@ input), подставляет его текущее значение в `span#n
 пустой, в спане должна отображаться строка `'незнакомец'`.
 
 ```html
-<input type="text" placeholder="Ваше имя?" id="name-input" />
+<input type="name" placeholder="Ваше имя?" id="name-input" />
 <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
 ```
 
