@@ -1,12 +1,12 @@
 const inputForm = document.querySelector("#name-input");
-const outputName = document.querySelector("#name-output");
+const inputNameText = document.querySelector("#name-output");
 inputForm.addEventListener("input", onFormChange);
 // inputForm.addEventListener("change", onFormFocus);
 
 function onFormChange(event) {
   console.log(event.currentTarget.value);
-  outputName.textContent = event.currentTarget.value;
-  if (event.data===null) {outputName.textContent='незнакомец'}
+  inputNameText.textContent = event.currentTarget.value;
+  if (event.data===null) {inputNameText.textContent='незнакомец'}
 }
 
 // function onFormFocus(event) {

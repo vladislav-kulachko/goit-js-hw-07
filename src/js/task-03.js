@@ -16,7 +16,7 @@ const images = [
 const gallery = document.querySelector("#gallery");
 gallery.classList.add("gal");
 
-const createrGalary = (images) => {
+const galaryCreater = (images) => {
   images.forEach((image) => {
     gallery.insertAdjacentHTML(
       "beforeend",
@@ -24,7 +24,7 @@ const createrGalary = (images) => {
     );
   });
 };
-createrGalary(images);
+galaryCreater(images);
 
 const galeryElem = document.querySelectorAll("li");
 const add = galeryElem.forEach((elem) => elem.classList.add("gal__elem"));
