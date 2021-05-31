@@ -9,6 +9,8 @@ inputNumbOfBoxes.addEventListener("input", (event) => {
   amount = event.currentTarget.value;
 });
 
+//=================================================================================
+
 function createBoxes(numbOfBoxes) {
   let newBox = " ";
   let width = 30;
@@ -30,14 +32,13 @@ btnCreateBoxes.addEventListener("click", () =>
   boxes.insertAdjacentHTML("beforeend", createBoxes(amount))
 );
 
-btnDestroyBoxes.addEventListener("click", () => (boxes.innerHTML = ""));
+//--------------------------------------------------------------------------------
 
-// btnCreateBoxes.addEventListener("click", createBoxes);
-// function createBoxes() {
+// function createBoxes(numbOfBoxes) {
 //   let width = 30;
 //   let height = 30;
 //   const randColor = () => Math.floor(Math.random() * 255);
-//   for (let i = 0; i < amount; i += 1) {
+//   for (let i = 0; i < numbOfBoxes; i += 1) {
 //     width += 10;
 //     height += 10;
 //     const newBox = document.createElement("div");
@@ -52,6 +53,12 @@ btnDestroyBoxes.addEventListener("click", () => (boxes.innerHTML = ""));
 //     console.log(boxes.children);
 //   }
 // }
+
+// btnCreateBoxes.addEventListener("click", () => createBoxes(amount));
+
+//--------------------------------------------------------------------------------
+
+btnDestroyBoxes.addEventListener("click", () => (boxes.innerHTML = ""));
 
 // let box = boxes.firstChild;
 // while (box) {
