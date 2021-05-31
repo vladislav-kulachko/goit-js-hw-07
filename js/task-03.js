@@ -16,15 +16,15 @@ const images = [
 const gallery = document.querySelector("#gallery");
 gallery.classList.add("gal");
 
-const galaryCreater = (images) => {
-  images.forEach((image) => {
-    gallery.insertAdjacentHTML(
-      "beforeend",
-      `<li><img src = "${image.url}" alt = "${image.alt}"></li>`
-    );
-  });
+const galleryCreater = (images) => {
+  return images.reduce(
+    (string, image) =>
+      string + `<li><img src = "${image.url}" alt = "${image.alt}"></li>`,
+    ""
+  );
 };
-galaryCreater(images);
+// gallery.innerHTML = galleryCreater(images);
+gallery.insertAdjacentHTML("afterbegin", galleryCreater(images));
 
 const galeryElem = document.querySelectorAll("li");
 const add = galeryElem.forEach((elem) => elem.classList.add("gal__elem"));
